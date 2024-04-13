@@ -1,110 +1,278 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Calm down
 
-Welcome Florian Guldner,
+Welcome to my second project, the Europe quiz website is a landing page for people who like quizzes and are motivated to test or improve their knowledge about European countries.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="" alt="image shows responisveness by presenting preview on different devices">
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Features
 
-## Gitpod Reminders
+### Navigation
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The user is able to navigate on the navigation bar. The quiz is the most prominent featuere therefor, it appears already on the landing apge.
+There are three navigation elements according to the three pages Quiz, Highscore and About. Due to responsive design requiremets the behaviour and position of the navigation bar is slightly different.
 
-`python3 -m http.server`
+Mobile view: Elements are aligned to the center. Toggle is used...
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+Tablet view: Logo on the left site, navigation elements on the right site.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Desktop view: Logo on the left site, navigation elements on the right site. Hover-effect is implemented. 
 
-A blue button should appear to click: _Make Public_,
+There are three media query breakpoints used: (320px), 768px, 992px
 
-Another blue button should appear to click: _Open Browser_.
+#### Desktop view
+<img src="" alt="image shows navigation desktop">
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Tablet view
+<img src="" alt="image shows navigation tablet">
 
-To log into the Heroku toolbelt CLI:
+#### Mobile view
+<img src="" alt="image shows navigation mobile">
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### The header 
+Title and logo are above the navigation. Depending on the media query the header gets bigger. The font-size/size of title and logo increases. The header's height is around XX px, therefore. there is a margin-top value of 97px for the main element.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Header
+<img src="" alt="image shows header">
 
-------
+### quiz.html
+The landing page contains a short introduction and the first question of the quiz.
 
-## Release History
+quiz.html
+<img src="" alt="image shows preview of why.html">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### highscore.html
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+highscroe.html
+<img src="" alt="image shows preview of how.html">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### about.html
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+about.html
+<img src="" alt="image shows preview of who.html">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### The Footer
+The footer contains a link to the creator's GitHub and Linkedin link. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## UX Design
+Colorful, plain and simple design. Show a map in the background to introduce the user to the topic - it's geography. The colors of a classic map are used.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ The design was created as a series of wireframes covering mobile, tablet and desktop to determine the initial design and layout of the site.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Color Scheme
+The colors used are mostlly aligned with the background and typical colors used on a map. Blue for water, beige for landscape and red, grey for cities and borders. The text color is dark grey and black to provide a userfriendly contrast.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- backgrounds #ffffff, #fce89a
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- water blue: #79c9e7, #a6dbef, #58afd9
+- land green #a0cf50, beige #fad27f, brown #c0643d
+- accents #
+- logo, illustrations #
+- font color #252525, #000000 #918e8e
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Typography
 
-------
+- I used the Google Font called ''
+- Font Awesome icons were used, for GitHub links in the footer
+- further icons/ illustrations used from [Freepik.com ](https://www.freepik.com/) and [Picjumbo.com](https://picjumbo.com/)
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+## User Stories
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### New Site Users
 
-**How will this affect me?**
+- As a new user, I would like to know what the site is about, so that I understand what the site does
+- As a new user, I would like to start a quiz
+- As a new user, I would like to receive a highscore
+- As a new user, I would like to change the mode between asking for capitals or asking for countries
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Returning Site Users
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- As a returning user, I would like to compare my highscore with other users
+- As a new user, I would like to adjust the level of dificulty
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Wireframes
+Wireframes were developed for mobile, tablet, and desktop sizes by using Balsamiq.
 
-**So….?**
+### Mobile Wireframes
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<img src="" alt="image shows wireframe of index.html">
+<img src="" alt="image shows wireframe of highscore.html">
 
-**Can I opt out?**
+### Tablet Wireframes
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<img src="" alt="image shows wireframe of index.html">
+<img src="" alt="image shows wireframe of highscore.html">
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Desktop Wireframes
 
-**Anything more?**
+<img src="" alt="image shows wireframe of index.html">
+<img src="" alt="image shows wireframe of highscore.html">
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+## Testing
+- Testing was done in small breaks during the development and at the end of the project
+- Validators have been used
+- small feature checks has been made by using preview and the devtools device toolbar
+- Tests are done in different browsers such as Edge, Chrome and Firefox
+- Responsivness is tested with different screen sizes by using devtools device toolbar
+- navigation, header and content of all subpages is readable and easy to understand
+- the audio files are working, the voice is understandable and autoplay is deactivated when the page is opened
 
-Happy coding!
+
+### Bugs
+Some adjustment has been necessary i.e. the flex features haven't been working correctly due to wrong values. I.e. typos caused problems with css definitions.
+
+id="menu_meditations":
+Due to header fixation the anchor has to be placed to another section (more above). Same problem appears when the sub-navigation is used an the user wants to jump to i.e. the body scan meditation. The header covers the audio player, the user has to scroll up a bit. To fix this issue a hidden anchor was added.
+
+id="logo-size":
+Id selector is used multiple times, therefore the elemt type id is not valid. The elemt is transferred into a class element.
+
+Due to a bad performance via Lighthouse the images have been compressed via [tiny.com](https://tinypng.com/)
+
+
+### Validator Testing
+Validator testing has been done on:
+
+#### [HTML validator](https://validator.w3.org/)
+
+No errors were returned
+
+<img src="images_readme/html_validator_index.PNG" alt="image shows preview of who.html">
+
+<details>
+    <summary>Subpages</summary>
+
+<img src="images_readme/html_validator_how.PNG" alt="image shows preview of who.html">
+
+<img src="images_readme/html_validator_who.PNG" alt="image shows preview of who.html">
+
+</details>
+
+#### [CSS validator](https://jigsaw.w3.org/css-validator/)
+
+No errors were returned
+
+<img src="images_readme/css_validator.PNG" alt="image shows preview of who.html">
+
+#### Accessability
+I confirm that the selected colors and fonts are easy to read and accessible by using Lighthouse in devtools (Chrome).
+
+<img src="images_readme/Lighthouse_analysis_index_03.04.2023.PNG" alt="image shows Lighthouse result">
+
+### Unfixed Bugs
+No unfixed bugs.
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Main Branch, then click "Save"
+- The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+
+Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.html
+
+<details>
+    <summary>Cloning repository</summary>
+
+1. Visit the GitHub repository.
+2. Find the Code button situated above the file list and give it a click.
+3. Choose your preferred cloning method — whether it's HTTPS, SSH, or GitHub and hit the copy button to copy the URL to your clipboard.
+4. Launch Git Bash or Terminal.
+5. Navigate to the directory where you want the cloned directory to reside.
+6. In your IDE Terminal, input the following command to clone the repository:
+ git clone https://github.com/Fl0W97/CI_p1_meditation-_website.git
+7. Press Enter to create your local clone.
+
+</details>
+
+
+## Tools & Technologies used
+
+- HTML used for the main site content
+- CSS used for the main site design and layout
+- CSS root variables used for reusable styles throughout the site
+- CSS Flexbox used for an enhanced responsive layout
+- Git used for version control (git status, git add, git commit)
+- GitHub used for secure online code storage
+- GitHub Pages used for hosting the deployed front-end site
+- Gitpod used for local IDE for development
+- [Balsamiq](https://balsamiq.com/wireframes/desktop) used for creating Wireframes
+- [Color generator](http://colormind.io/) used for choosing the correct HEX code
+- [Favicon.io](https://favicon.io/) used to create the favicon
+- [Google Fonts](https://fonts.google.com/) used to search a suitable font and using it
+- [Font Awesome](https://fontawesome.com/) used for logo designs (Linkedin, Youtube and GitHub)
+- [Tinypng](https://tinypng.com/) used for reducing image size
+
+
+## Credits
+
+### Media
+
+<details>
+    <summary>icons/ illustrations and images used from [Freepik.com ](https://www.freepik.com/) and [Picjumbo.com](https://picjumbo.com/)</summary>
+
+#### Images for reasons
+
+- https://www.freepik.com/icon/peace_9344997
+- https://www.freepik.com/icon/friend_10879075
+- https://www.freepik.com/icon/target_566958
+- https://www.freepik.com/icon/overwhelmed_6210111
+- https://www.freepik.com/icon/pain_6210132
+
+#### Image for meditations etc
+
+- https://www.freepik.com/icon/boiling_2478676
+- https://www.freepik.com/icon/mindfulness_11245449
+- https://www.freepik.com/icon/one-man-walking_76865
+- https://www.freepik.com/icon/circle-arrows_7893895
+- https://www.freepik.com/icon/body-scan_10890662
+
+#### Image hero image
+
+- https://picjumbo.com/download=woman-meditating-on-wooden-platform-with-amazing-scenery-view-free-photo.jpg&n=woman-meditating-on-wooden-platform-with-amazing-scenery-view&id=1
+
+#### Background image
+
+- https://i0.wp.com/picjumbo.com/wp-content/uploads/romantic-fall-scenery-countryside-road-in-foggy-autumn-morning-free-photo.jpg?w=2210&quality=70
+
+#### Logo Calm down
+
+- https://www.istockphoto.com/de/vektor/abstrakte-pyramide-der-lebensbalance-suche-mit-anpassung-des-mentalen-und-gm1353485594-428574758
+
+#### Photo of the author Chade-Meng Tan
+- https://community.thriveglobal.com/wp-content/uploads/2017/08/20120201_1_0032.jpg
+
+</details>
+
+
+#### All audio files are recorded by the website creator.
+
+
+### Content
+
+- Book 'Search Inside Yourself by Chade-Meng Tan
+- https://www.helpguide.org/meditations/guided-imagery-meditation.htm
+- https://www.mindful.org/how-to-meditate/
+- https://siyli.org/check-out-siylis-new-look/
+- https://www.headspace.com/
+- Support in text formulating [ChatGPT](https://chat.openai.com/) 
+
+
+### Code
+
+| Description  | Source | URL |
+| ------------- | ------------- | ------------- |
+| Flex:box logic for responisive navigation and content.  | Code Institute, Course Love Running Project | [https://learn.codeinstitute.net](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+2/courseware/e805068059af42af87681032aa64053f/7525117e5cd144daa2a7b0c57843bbee/)
+| Audio feature  | w3schools  | https://www.w3schools.com/tags/tag_audio.asp
+| Fix anchor | Forum Stackoverflow  | https://stackoverflow.com/questions/10732690offsetting-an-html-anchor-to-adjust-for-fixed-header
+| Scroll smooth feature  | w3schools  | https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+| Generate Markdown file  | GitHUb | https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
