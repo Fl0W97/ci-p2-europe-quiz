@@ -1,0 +1,136 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    min-height: 100vh;
+    /* min-width: 320px; I want to have the min-width to 320px so that he navigation is not pushed down. But it's not working */
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #fad27f;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 1px 1px #3a3a3a;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #252525;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+p {
+    padding: 3px;
+}
+
+/* Logo size */
+#logo {
+    height: 30px;
+    width: 30px;
+}
+
+nav {
+    top: 100%;
+}
+
+.menu {
+    font-size: 110%;
+    letter-spacing: 1px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.menu > li {
+    margin: 0.5rem;
+    color: #3a3a3a;
+}
+
+.menu li a {
+    color: #3a3a3a;
+    padding-right: 1rem;
+    padding-left: 3px;
+}
+
+.active {
+    border-bottom: 2px solid #c0643d;
+    border-top: 2px solid #c0643d;
+    font-weight: bold;
+}
+
+/* Main content */
+main {
+    background-color: #fce89a;
+    /* Push main down due to header*/
+    margin-top: 100px;
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+}
+
+h2 {
+
+}
+
+h3 {
+
+
+}
+
+section_style {
+
+}
+
+#box_questions {
+    background-color: blue;
+}
+
+#box_answers {
+    background-color: green;
+}
+
+.answer {
+    background-color: red;
+}
+
+
+/* Footer */
+footer {
+    background-color: #dcccb2;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 2px solid #3a3a3a;
+}
+
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  color: #0f9d58;
+  font-size: 150%;
+}
