@@ -92,37 +92,107 @@ main {
     flex: 1 0 auto;
 }
 
-
 #bg-euro-map {
     background: url("/../assets/images/bg_euro_map.jpg") no-repeat center /cover; 
 }
 
-/*
 .bg-transparent {
     background-color: rgba(255, 255, 255, .8);
     width: 100%;
     height: 100%;
 }
-*/
+
 .section_style {
     margin: auto;
     width: 90%;
-    padding-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .8);
 }
 
+
+/****** start switch topic ******/
+
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+
+/****** end switch topic ******/
+
 #box_questions {
-    background-color: blue;
+    padding-top: 20px;
+    background-color: #79c9e7;
+    border: 2px solid #dcccb2;
     text-align: center;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 #box_answers {
-    background-color: green;
 }
 
 .answer {
     margin: auto;
     width: 50%;
-    background-color: red;
+    background-color: #fce89a;
     padding: 10px;
     border: 3px solid #dcccb2;
     text-align: center;
@@ -132,7 +202,7 @@ main {
 
 .answer:hover {
     border: 3px solid #0f9d58;
-    text-size: 110%;
+    font-size: 110%;
     font-weight: bold;
 }
 
@@ -205,12 +275,6 @@ footer {
 
   /* Media query: desktop and larger (992px and up) */
  @media screen and (min-width: 992px) {
-
-    /* Logo size defined for all icons and logos, increase logo size */
-    .logo_size {
-    height: 40px;
-    width: 40px;
-    }
     
     .menu li a:hover {
         color: #0f9d58;
