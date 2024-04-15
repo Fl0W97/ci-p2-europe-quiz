@@ -1,17 +1,15 @@
 /* country-capital database as object */
 let allCountriesCapitals = {
-    Germany: 'Berlin',
-    France: 'Paris',
-    Poland: 'Warschauw',
-    Italy: 'Rom',
-    Spain: 'Madrid',
-    Portugal: 'Lissabon',
-    Austria: 'Wien',
-    Swizerland: 'Bern',
-    Netherlands: 'Amsterdam',
+    country: ['Germany','France','Poland','Italy','Spain','Belgium','Portugal','Austria','Netherlands'],
+    capital: ['Berlin','Paris','Warsaw','Rome','Madrid','Brussels','Lissabon','Vienna','Amsterdam'] 
 }
 
-/* variables */
+
+let randomCountry = allCountriesCapitals[Math.floor(Math.random()*array.length)];
+
+"What is the capital of" + randomCountry + "?"
+
+/* variables 
 let user
 
 let QuestionCity
@@ -28,12 +26,15 @@ let MultiplyChoiceCountry2
 
 let highscore
 
+let question = 'What is the captital city of' + allCountriesCapitals[1] + '?'
 
 
-/* provides the questions */
-function randomQuestion ()
+ provides the questions
+function randomQuestion (   
+    console.log(random(allCountriesCapitals[1]);
+)
 
-/* checks answer */
+ checks answer
 function checkAnswer ()
 
 function wrongAnswer ()
@@ -49,3 +50,5 @@ function gameModeStart()
 function gameModeMultiplyChoice()
 
 function gameModeJoker()
+
+*/

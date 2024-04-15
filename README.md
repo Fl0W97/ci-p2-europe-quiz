@@ -126,15 +126,7 @@ Wireframes were developed for mobile, tablet, and desktop sizes by using Balsami
 
 
 ### Bugs
-Some adjustment has been necessary i.e. the flex features haven't been working correctly due to wrong values. I.e. typos caused problems with css definitions.
-
-id="menu_meditations":
-Due to header fixation the anchor has to be placed to another section (more above). Same problem appears when the sub-navigation is used an the user wants to jump to i.e. the body scan meditation. The header covers the audio player, the user has to scroll up a bit. To fix this issue a hidden anchor was added.
-
-id="logo-size":
-Id selector is used multiple times, therefore the elemt type id is not valid. The elemt is transferred into a class element.
-
-Due to a bad performance via Lighthouse the images have been compressed via [tiny.com](https://tinypng.com/)
+...
 
 
 ### Validator Testing
@@ -144,14 +136,14 @@ Validator testing has been done on:
 
 No errors were returned
 
-<img src="images_readme/html_validator_index.PNG" alt="image shows preview of who.html">
+<img src="" alt="image shows preview of index.html">
 
 <details>
     <summary>Subpages</summary>
 
-<img src="images_readme/html_validator_how.PNG" alt="image shows preview of who.html">
+<img src="" alt="image shows preview of index.html">
 
-<img src="images_readme/html_validator_who.PNG" alt="image shows preview of who.html">
+<img src="" alt="image shows preview of index.html">
 
 </details>
 
@@ -159,12 +151,12 @@ No errors were returned
 
 No errors were returned
 
-<img src="images_readme/css_validator.PNG" alt="image shows preview of who.html">
+<img src="" alt="image shows preview of index.html">
 
 #### Accessability
 I confirm that the selected colors and fonts are easy to read and accessible by using Lighthouse in devtools (Chrome).
 
-<img src="images_readme/Lighthouse_analysis_index_03.04.2023.PNG" alt="image shows Lighthouse result">
+<img src="" alt="image shows lighthouse result">
 
 ### Unfixed Bugs
 No unfixed bugs.
@@ -201,6 +193,7 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 - CSS used for the main site design and layout
 - CSS root variables used for reusable styles throughout the site
 - CSS Flexbox used for an enhanced responsive layout
+- JavaScript for the dynamic featueres, quiz, highscore count, etc.
 - Git used for version control (git status, git add, git commit)
 - GitHub used for secure online code storage
 - GitHub Pages used for hosting the deployed front-end site
@@ -222,48 +215,29 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 
 #### Images for reasons
 
-- https://www.freepik.com/icon/peace_9344997
-- https://www.freepik.com/icon/friend_10879075
-- https://www.freepik.com/icon/target_566958
-- https://www.freepik.com/icon/overwhelmed_6210111
-- https://www.freepik.com/icon/pain_6210132
 
 #### Image for meditations etc
 
-- https://www.freepik.com/icon/boiling_2478676
-- https://www.freepik.com/icon/mindfulness_11245449
-- https://www.freepik.com/icon/one-man-walking_76865
-- https://www.freepik.com/icon/circle-arrows_7893895
-- https://www.freepik.com/icon/body-scan_10890662
 
 #### Image hero image
 
-- https://picjumbo.com/download=woman-meditating-on-wooden-platform-with-amazing-scenery-view-free-photo.jpg&n=woman-meditating-on-wooden-platform-with-amazing-scenery-view&id=1
 
 #### Background image
 
-- https://i0.wp.com/picjumbo.com/wp-content/uploads/romantic-fall-scenery-countryside-road-in-foggy-autumn-morning-free-photo.jpg?w=2210&quality=70
 
-#### Logo Calm down
+#### Logo
 
-- https://www.istockphoto.com/de/vektor/abstrakte-pyramide-der-lebensbalance-suche-mit-anpassung-des-mentalen-und-gm1353485594-428574758
 
-#### Photo of the author Chade-Meng Tan
-- https://community.thriveglobal.com/wp-content/uploads/2017/08/20120201_1_0032.jpg
+#### Photo of the creator
+
 
 </details>
 
 
-#### All audio files are recorded by the website creator.
-
 
 ### Content
 
-- Book 'Search Inside Yourself by Chade-Meng Tan
-- https://www.helpguide.org/meditations/guided-imagery-meditation.htm
-- https://www.mindful.org/how-to-meditate/
-- https://siyli.org/check-out-siylis-new-look/
-- https://www.headspace.com/
+- https://www.destatis.de/Europa/DE/Thema/Basistabelle/Bevoelkerung.html
 - Support in text formulating [ChatGPT](https://chat.openai.com/) 
 
 
@@ -271,8 +245,4 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 
 | Description  | Source | URL |
 | ------------- | ------------- | ------------- |
-| Flex:box logic for responisive navigation and content.  | Code Institute, Course Love Running Project | [https://learn.codeinstitute.net](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+2/courseware/e805068059af42af87681032aa64053f/7525117e5cd144daa2a7b0c57843bbee/)
-| Audio feature  | w3schools  | https://www.w3schools.com/tags/tag_audio.asp
-| Fix anchor | Forum Stackoverflow  | https://stackoverflow.com/questions/10732690offsetting-an-html-anchor-to-adjust-for-fixed-header
-| Scroll smooth feature  | w3schools  | https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
 | Generate Markdown file  | GitHUb | https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
