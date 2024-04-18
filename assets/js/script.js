@@ -1,54 +1,48 @@
 /* country-capital database as object */
 let allCountriesCapitals = {
-    country: ['Germany','France','Poland','Italy','Spain','Belgium','Portugal','Austria','Netherlands'],
-    capital: ['Berlin','Paris','Warsaw','Rome','Madrid','Brussels','Lissabon','Vienna','Amsterdam'] 
+    country: ['Germany', 'France', 'Poland', 'Italy', 'Spain', 'Belgium', 'Portugal', 'Austria', 'the Netherlands'],
+    capital: ['Berlin', 'Paris', 'Warsaw', 'Rome', 'Madrid', 'Brussels', 'Lissabon', 'Vienna', 'Amsterdam']
 }
 
-
-let randomCountry = allCountriesCapitals[Math.floor(Math.random()*array.length)];
-
-"What is the capital of" + randomCountry + "?"
-
-/* variables 
-let user
-
-let QuestionCity
-
-let QuestionCountry
-
-let MultiplyChoiceCity1
-
-let MultiplyChoiceCity2
-
-let MultiplyChoiceCountry1
-
-let MultiplyChoiceCountry2
-
-let highscore
-
-let question = 'What is the captital city of' + allCountriesCapitals[1] + '?'
+// Initialize highscore
+const highscore = 0;
 
 
- provides the questions
-function randomQuestion (   
-    console.log(random(allCountriesCapitals[1]);
-)
+// Generate a random index to select a country
+let randomIndex = Math.floor(Math.random() * allCountriesCapitals.country.length);
 
- checks answer
-function checkAnswer ()
+// Get the random country using the random index
+let randomCountry = allCountriesCapitals.country[randomIndex];
 
-function wrongAnswer ()
 
-function timer ()
+document.getElementById("box_questions").innerHTML = "What is the capital of " + randomCountry + " ?";
 
-function SaveUser()
+let correctAnswer = allCountriesCapitals.capital[randomIndex];
 
-function countHighscore ()
+// using the modulo operator % to wrap around to the beginning of the array if the index exceeds its length
+let wrongAnswer1 = allCountriesCapitals.capital[(randomIndex + 1) % allCountriesCapitals.capital.length];
+let wrongAnswer2 = allCountriesCapitals.capital[(randomIndex + 2) % allCountriesCapitals.capital.length];
 
-function gameModeStart()
+let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2]
 
-function gameModeMultiplyChoice()
+// provide input for answers in HTML
+document.getElementById("answerbox1").innerHTML = allAnswers[0];
+document.getElementById("answerbox2").innerHTML = allAnswers[1];
+document.getElementById("answerbox3").innerHTML = allAnswers[2];
 
-function gameModeJoker()
+// show highscore
+document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
 
-*/
+
+function handleClick(event) {
+    // get user's answer
+    let userAnswer = event.target.textContent;
+    // check answer
+    if (userAnswer === correctAnswer) {
+        document.getElementById("answer").innerHTML = "Correct!";
+        highscore++; // Increment score if the answer is correct
+
+    } else {
+        document.getElementById("answer").innerHTML = "Incorrect! The correct answer is" + correctAnswer;
+    }
+}
