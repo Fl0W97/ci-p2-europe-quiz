@@ -34,6 +34,6 @@ function handleClick(event) {
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
     } else {
-        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is" + correctAnswer;
+        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
 }
