@@ -4,6 +4,9 @@ let allCountriesCapitals = {
     capital: ['Berlin', 'Paris', 'Warsaw', 'Rome', 'Madrid', 'Brussels', 'Lissabon', 'Vienna', 'Amsterdam']
 }
 
+// Initialize highscore
+let highscore = 0;
+
 // Generate a random index to select a country
 let randomIndex = Math.floor(Math.random() * allCountriesCapitals.country.length);
 
@@ -26,6 +29,9 @@ document.getElementById("box1").innerHTML = allAnswers[0];
 document.getElementById("box2").innerHTML = allAnswers[1];
 document.getElementById("box3").innerHTML = allAnswers[2];
 
+//show highscore
+document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
+
 // provide feedback for user
 function handleClick(event) {
     // get user's answer
@@ -33,6 +39,8 @@ function handleClick(event) {
     // check answer
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
+        highscore = highscore + 1; //highscroe ++
+        document.getElementById("highscore").innerHTML = "Highscore is: " + highscore; // Update highscore display
     } else {
         document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
