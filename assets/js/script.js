@@ -25,3 +25,15 @@ let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
 document.getElementById("box1").innerHTML = allAnswers[0];
 document.getElementById("box2").innerHTML = allAnswers[1];
 document.getElementById("box3").innerHTML = allAnswers[2];
+
+// provide feedback for user
+function handleClick(event) {
+    // get user's answer
+    let userAnswer = event.target.textContent;
+    // check answer
+    if (userAnswer === correctAnswer) {
+        document.getElementById("feedbackForUser").innerHTML = "Correct!";
+    } else {
+        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is" + correctAnswer;
+    }
+}
