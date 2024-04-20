@@ -4,6 +4,8 @@ let allCountriesCapitals = {
     capital: ['Berlin', 'Paris', 'Warsaw', 'Rome', 'Madrid', 'Brussels', 'Lissabon', 'Vienna', 'Amsterdam']
 };
 
+let highscore = 0;
+
 // Generate a random index to select a country
 let randomIndex = Math.floor(Math.random() * allCountriesCapitals.country.length);
 
@@ -26,29 +28,17 @@ document.getElementById("box1").innerHTML = allAnswers[0];
 document.getElementById("box2").innerHTML = allAnswers[1];
 document.getElementById("box3").innerHTML = allAnswers[2];
 
-<<<<<<< HEAD
 //show highscore
 document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
 
-<<<<<<< HEAD
-}
+// Get reference to answer options
+const answerOptions = document.querySelectorAll('.answer');
 
-    // provide feedback for user
-    function handleClick(event) {
-        // get user's answer
-        let userAnswer = event.target.textContent;
-        // check answer
-        if (userAnswer === correctAnswer) {
-            document.getElementById("feedbackForUser").innerHTML = "Correct!";
-            highscore = highscore + 1; //highscroe ++
-            document.getElementById("highscore").innerHTML = "Highscore is: " + highscore; // Update highscore display
-        } else {
-            document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
-        }
-    }
-=======
-=======
->>>>>>> parent of 482d86d (add highscore)
+// Add event listener to each answer option
+answerOptions.forEach(answer => {
+    answer.addEventListener('click', handleClick);
+});
+
 // provide feedback for user
 function handleClick(event) {
     // get user's answer
@@ -56,8 +46,10 @@ function handleClick(event) {
     // check answer
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
+        highscore = highscore + 1;
+        document.getElementById("highscore").innerHTML = "Highscore is: " + highscore; // Update highscore display
     } else {
-        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is" + correctAnswer;
+        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
 }
->>>>>>> parent of b1c0fbe (testing, adding small adjustments - loop still not working)
+
