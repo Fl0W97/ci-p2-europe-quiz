@@ -57,7 +57,7 @@ function handleClick(event) {
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
     } else {
-        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
+        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is" + correctAnswer;
     }
 }
 >>>>>>> parent of b1c0fbe (testing, adding small adjustments - loop still not working)
