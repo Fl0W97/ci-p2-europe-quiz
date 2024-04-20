@@ -2,7 +2,7 @@
 let allCountriesCapitals = {
     country: ['Germany', 'France', 'Poland', 'Italy', 'Spain', 'Belgium', 'Portugal', 'Austria', 'the Netherlands'],
     capital: ['Berlin', 'Paris', 'Warsaw', 'Rome', 'Madrid', 'Brussels', 'Lissabon', 'Vienna', 'Amsterdam']
-}
+};
 
 // Initialize highscore
 let highscore = 0;
@@ -33,6 +33,8 @@ for (let i = 0; i < allCountriesCapitals.country.length; i++) {
     //show highscore
     document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
 
+}
+
     // provide feedback for user
     function handleClick(event) {
         // get user's answer
@@ -46,5 +48,3 @@ for (let i = 0; i < allCountriesCapitals.country.length; i++) {
             document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
         }
     }
-
-}
