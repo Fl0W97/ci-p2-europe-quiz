@@ -1,10 +1,10 @@
-/* country-capital database as object, first 20 */
+/* country-capital database as nested list*/
 let allCountriesCapitals = {
     country: ['Albania', 'Andorra', 'Austria', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Georgia', 'Germany', 'Gibraltar (UK)', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Kosovo', 'Lativa', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macedonia', 'Malta', 'Moldova', 'Monaco', 'Montenegro', 'Netherlands', 'Norway', 'Poland', 'Portugal', 'Romania', 'Russia', 'San Marino', 'Serbia', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom', 'Vatican City'],
     capital: ['Tirana', 'Andorra la Vella', 'Vienna', 'Minsk', 'Brussels', 'Sarajevo', 'Sofia', 'Zagreb', 'Nicosia', 'Prague', 'Copenhagen', 'Tallin', 'Helsinki', 'Paris', 'Tbilisi', 'Berlin', 'Gibraltar', 'Athens', 'Budapest', 'Reykjavik', 'Dublin', 'Rome', 'Pristina', 'Riga', 'Vaduz', 'Vulnius', 'Luxembourg city', 'Skopje', 'Valletta', 'Chisinau', 'Monaco', 'Podgorica', 'Amsterdam', 'Oslo' , 'Warsaw', 'Lisbon', 'Bucharest', 'Moscow', 'San Marino', 'Belgrade', 'Bratislava', 'Ljubljana', 'Madrid', 'Stockholm', 'Bern', 'Ankara', 'Kiev', 'London', 'Vatican City']
 };
 
-//Manage highscore
+//Manage highscore, list not working yet !!!!
 let highscoreList = {
     user: [],
     highscore: []
@@ -87,7 +87,7 @@ for (let i = 0; i < answerElements.length; i++) {
     answerElements[i].addEventListener('click', clickAnswer);
 }
 
-// The game is over: Alert, add highscore to highscoreList
+// The game is over: Alert, add highscore to highscoreList, not working yet !!!!
 function gameOver () {
     alert('The game is over. Your highscore is '  + highscore)
     highscoreList.user('Tom');
@@ -107,6 +107,9 @@ normalQuestionOneAnswer()
 activateMultipleChoice()
 
 ShowHighscoreList()
+
+addUserName()
+
 
 
 
