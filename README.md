@@ -1,4 +1,4 @@
-# Calm down
+# Europe Quiz
 
 Welcome to my second project, the Europe quiz website is a landing page for people who like quizzes and are motivated to test or improve their knowledge about European countries.
 

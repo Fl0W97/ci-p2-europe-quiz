@@ -113,4 +113,7 @@ addUserName()
 
 
 
--- change array to object CountryCapital -- 
+-- change array to object CountryCapital
+-- add background image of city in list
+-- add president, cancelor, king, ... 
+-- add currency */
