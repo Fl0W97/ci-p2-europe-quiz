@@ -94,3 +94,20 @@ function gameOver () {
     highscoreList.highscore(highscore);
 }
 
+
+/* following function planned:
+loop while for 
+    generateQuestion()
+    addHIghscore to Object or array
+
+ChangeMode_CapitalCountry()
+
+normalQuestionOneAnswer()
+
+activateMultipleChoice()
+
+ShowHighscoreList()
+
+
+
+-- change array to object CountryCapital -- 
