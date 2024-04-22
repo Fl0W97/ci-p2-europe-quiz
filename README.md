@@ -11,12 +11,11 @@ Welcome to my second project, the Europe quiz website is a landing page for peop
 The user is able to navigate on the navigation bar. The quiz is the most prominent featuere therefor, it appears already on the landing apge.
 There are three navigation elements according to the three pages Quiz, Highscore and About. Due to responsive design requiremets the behaviour and position of the navigation bar is slightly different.
 
-Mobile view: Elements are aligned to the center. Toggle is used...
+Mobile view: Elements are aligned to the center. burger tab is not used.
+s
+Tablet view: Elements are aligned to the center. Toggle is not used, hover effect available
 
-
-Tablet view: Logo on the left site, navigation elements on the right site.
-
-Desktop view: Logo on the left site, navigation elements on the right site. Hover-effect is implemented. 
+Desktop view: Elements are aligned to the center. Toggle is not used, hover effect available. Hover-effect is implemented. 
 
 There are three media query breakpoints used: (320px), 768px, 992px
 
@@ -36,22 +35,22 @@ Header
 <img src="" alt="image shows header">
 
 ### quiz.html
-The landing page contains a short introduction and the first question of the quiz.
+The landing page contains a short introduction, the game settings and the first question of the quiz.
 
 quiz.html
-<img src="" alt="image shows preview of why.html">
+<img src="" alt="">
 
 ### highscore.html
 
 
 highscroe.html
-<img src="" alt="image shows preview of how.html">
+<img src="" alt="">
 
 ### about.html
 
 
 about.html
-<img src="" alt="image shows preview of who.html">
+<img src="" alt="">
 
 
 ### The Footer
@@ -101,17 +100,17 @@ Wireframes were developed for mobile, tablet, and desktop sizes by using Balsami
 
 ### Mobile Wireframes
 
-<img src="" alt="image shows wireframe of index.html">
+<img src="images_README/wireframe_desktop_quiz.PNG" alt="image shows wireframe of index.html">
 <img src="" alt="image shows wireframe of highscore.html">
 
 ### Tablet Wireframes
 
-<img src="" alt="image shows wireframe of index.html">
+<img src="images_README/wireframe_tablet_quiz.PNG" alt="image shows wireframe of index.html">
 <img src="" alt="image shows wireframe of highscore.html">
 
 ### Desktop Wireframes
 
-<img src="" alt="image shows wireframe of index.html">
+<img src="images_README/wireframe_phone_quiz.PNG" alt="image shows wireframe of index.html">
 <img src="" alt="image shows wireframe of highscore.html">
 
 
