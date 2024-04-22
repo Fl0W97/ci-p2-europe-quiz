@@ -107,6 +107,7 @@ main {
     width: 90%;
     padding: 20px;
     background-color: rgba(255, 255, 255, .8);
+    text-align: center;
 }
 
 
@@ -187,6 +188,11 @@ main {
 }
 
 #box_answers {
+
+}
+
+#game_settings {
+
 }
 
 .answer {
@@ -257,10 +263,15 @@ footer {
         flex-direction: column;
         display: flex;
         /*justify-content: space-around;*/
-        width: 80%;
     }
 
     #box_answers {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #game_settings {
         flex-direction: row;
         display: flex;
         justify-content: space-around;
