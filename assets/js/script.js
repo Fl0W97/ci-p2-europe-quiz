@@ -51,10 +51,8 @@ const CountriesCapitals = [
     { country: "Vatican City", capital: "Vatican City" }
 ];
 
-// User input relevant for modeTypeAnswer = userInput
-let userName = document.getElementById('username');
-let numberQuestions = parseInt(document.getElementById('noOfQuestions').value, 10);
-let userInput;
+// Total number of question is defined and not changeable for the user
+let totalNumberQuestions = 5;
 
 // Boxes for hide/display
 let box_answers = document.getElementById("box_answers");
@@ -73,7 +71,13 @@ const answer3 = document.getElementById("box3");
 
 // Highscore
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+let numberCorrectAnswers;
 let highscore;
+
+// Timer
+let timeLeft;
+let elem = document.getElementById('timer');
+let timerId = setInterval(countdown, 1000);
 
 // DOM load
 document.addEventListener("DOMContentLoaded", function () {
@@ -92,21 +96,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to start the quiz
 function startQuiz() {
+    // Set indext and highscore locally to 0
     index = 0;
+    numberCorrectAnswers = 0;
     highscore = 0;
-    numberQuestions = parseInt(document.getElementById('noOfQuestions').value, 10); // Update number of questions here
 
+    //start countdown
+    timeLeft = 20;
+    countdown();
+
+    // Manage visibility of elements
     document.getElementById('quiz_questions').style.visibility = 'inherit';
     document.getElementById('quiz_settings').style.visibility = 'hidden';
 
+    // Shuffle database
     shuffle(CountriesCapitals);
     console.log(CountriesCapitals);
 
+    // Settings
     saveModeSettings();
-    console.log(modeTypeQuestion);
-    console.log(numberQuestions);
+    console.log('switch is set to' + modeTypeQuestion);
+    console.log('total number of questions is' + totalNumberQuestions);
 
+    // Display questions
     displayNextQuestion();
+}
+
+// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        // Generate a random index between 0 and i (inclusive)
+        const randomIndex1 = Math.floor(Math.random() * (i + 1));
+
+        // Swap elements at current index and random index
+        let temp = array[i]; // Store the current element in a temporary variable
+        array[i] = array[randomIndex1]; // Assign the randomly selected element to the current index
+        array[randomIndex1] = temp; // Assign the stored current element to the randomly selected index
+    }
 }
 
 // Function to handle answer clicks
@@ -125,11 +151,14 @@ function handleUserAnswer(answer) {
 
 // Function to display the next question or end the quiz if all questions have been answered
 function displayNextQuestion() {
-    if (index < numberQuestions) {
+    if (index < totalNumberQuestions) {
         displayQuestionAnswer();
         console.log('displayNextQuestion');
         index++;
+        timeLeft = 20;
+        countdown();
         console.log('display index:' + index);
+        console.log('Number correct Answers:' + numberCorrectAnswers);
         console.log('highscore:' + highscore);
     } else {
         // No more questions left, end of the game
@@ -143,19 +172,6 @@ function handleUserInput(userInput) {
     checkAnswer();
     // After checking the answer, proceed to the next question
     displayNextQuestion();
-}
-
-// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        // Generate a random index between 0 and i (inclusive)
-        const randomIndex1 = Math.floor(Math.random() * (i + 1));
-
-        // Swap elements at current index and random index
-        let temp = array[i]; // Store the current element in a temporary variable
-        array[i] = array[randomIndex1]; // Assign the randomly selected element to the current index
-        array[randomIndex1] = temp; // Assign the stored current element to the randomly selected index
-    }
 }
 
 function saveModeSettings() {
@@ -180,14 +196,12 @@ function displayQuestionAnswer() {
             displayMultipleChoice();
             console.log('capital');
             console.log('Answer User:' + userAnswer);
-            console.log('Input User:' + userInput);
             break;
         case 'country':
             displayQuestionCountry();
             displayMultipleChoice();
             console.log('country');
             console.log('Answer User:' + userAnswer);
-            console.log('Input User:' + userInput);
     }
 }
 
@@ -224,6 +238,7 @@ function displayMultipleChoice() {
 
     // Shuffle through list allAnswers so that the right answer is not always on the same index
     shuffle(allAnswers);
+    console.log('shuffle baby');
 
     // Provide input for answers in HTML
     answer1.innerHTML = allAnswers[0];
@@ -235,12 +250,24 @@ function displayMultipleChoice() {
 function checkAnswer() {
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
-        highscore++;
+        numberCorrectAnswers++;
+        highscore = numberCorrectAnswers*10;
         document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
         console.log('check is done.')
     } else {
         document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
+}
+
+// TIMER
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    gameOver();
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
 }
 
 // The game is over: Alert, add highscore to highscoreList, not working yet !!!!
@@ -254,20 +281,3 @@ function gameOver() {
 function saveHighScore(e) {
     console.log("clicked the save button!");
 }
-
-/* TIMER
-var timeLeft = 30;
-var elem = document.getElementById('Timer');
-
-var timerId = setInterval(countdown, 1000);
-
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    gameOver();
-  } else {
-    elem.innerHTML = timeLeft + ' seconds remaining';
-    timeLeft--;
-  }
-}
-*/
