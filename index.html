@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body id="bg-euro-map">
     <!-- logo, navigation -->
     <header>
         <a href="index.html" aria-label="Redicrection to index page (does not open in a new tab)">
@@ -33,57 +33,54 @@
                 <li>
                     <a href="highscore.html">Highscore</a>
                 </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
             </ul>
         </nav>
     </header>
 
     <!-- Main content -->
-    <main id="bg-euro-map">
+    <main>
         <!-- intro, game set up -->
-        <section class="section_style">
+        <section class="section_style" id="quiz_settings">
             <h2>
-                Welcome, select the game mode to start
+                Welcome
             </h2>
-            <div id="game_settings">
+            <p>
+                Choose wheather you want to guess the correct capital or its country. 40 questions are waiting for you. The faster you click the higher gets your highscore!
+            </p>
+                <div class="inputField">
+                    <label for="noOfQuestions">Number of questions:<br></label>
+                    <input type="noOfQuestions" id="noOfQuestions" name="noOfQuestions">
+                </div> 
                 <div>
-                    <p>Start with Capital or Country</p>
+                    <p>Capital --- Country</p>
                     <!-- switch -->
-                    <label class="switch">
-                        <input type="checkbox">
+                    <label class="switch" for="CheckboxQuestion">
+                        <input type="checkbox" id="CheckboxQuestion" name="CheckboxQuestion">
                         <span class="slider round"></span>
                     </label>
                 </div>
-                <div>
-                    <p>Multiple choice yes or no</p>
-                    <!-- switch -->
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-
+            </div>
+            <div>
+                <button type="button" id="button">Start Quiz</button>
             </div>
         </section>
 
         <!-- questions and answers -->
-        <section class="section_style">
+        <section class="section_style" id="quiz_questions">
             <div id="box_questions">
                 <p class="question"></p>
             </div>
             <div id="box_answers">
-                <div class="answer" id="box1">answer left
+                <div class="answer" id="box1">
                 </div>
-                <div class="answer" id="box2">answer middle
+                <div class="answer" id="box2">
                 </div>
-                <div class="answer" id="box3">answer right
+                <div class="answer" id="box3">
                 </div>
             </div>
-            <div id="feedbackForUser">answer right
+            <div id="feedbackForUser">
             </div>
-            <div id="highscore">answer right
+            <div id="highscore">
             </div>
         </section>
     </main>
@@ -108,7 +105,7 @@
 
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script5.js"></script>
 </body>
 
 </html>
