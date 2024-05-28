@@ -47,12 +47,6 @@ p {
     padding: 3px;
 }
 
-/* Logo size */
-/* #logo {
-    height: 30px;
-    width: 30px;
-}
-*/
 nav {
     top: 100%;
 }
@@ -85,8 +79,6 @@ nav {
 
 /* Main content */
 main {
-    /* background-color: #fce89a; */
-    /* Push main down due to header*/
     margin-top: 100px;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
@@ -187,12 +179,21 @@ main {
     font-weight: bold;
 }
 
-#box_answers {
-
+.btn {
+    margin: auto;
+    width: 50%;
+    background-color: #fce89a;
+    padding: 10px;
+    border: 3px solid #dcccb2;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#game_settings {
-
+.btn:hover {
+    border: 3px solid #0f9d58;
+    font-size: 110%;
+    font-weight: bold;
 }
 
 .answer {
