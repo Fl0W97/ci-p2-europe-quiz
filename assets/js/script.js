@@ -101,10 +101,6 @@ function startQuiz() {
     numberCorrectAnswers = 0;
     highscore = 0;
 
-    //start countdown
-    timeLeft = 20;
-    countdown();
-
     // Manage visibility of elements
     document.getElementById('quiz_questions').style.visibility = 'inherit';
     document.getElementById('quiz_settings').style.visibility = 'hidden';
@@ -246,12 +242,13 @@ function displayMultipleChoice() {
     answer3.innerHTML = allAnswers[2];
 }
 
-// Check answer
+// Check answer and adjust highscore
 function checkAnswer() {
     if (userAnswer === correctAnswer) {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
         numberCorrectAnswers++;
-        highscore = numberCorrectAnswers*10;
+        console.log('Show time left:' + timeLeft);
+        highscore = numberCorrectAnswers*10 + timeLeft;
         document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
         console.log('check is done.')
     } else {
