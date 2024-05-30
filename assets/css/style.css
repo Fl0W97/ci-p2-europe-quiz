@@ -221,6 +221,18 @@ main {
     font-weight: bold;
 }
 
+/* Dialog box */
+dialog::backdrop {
+    background-color: hsl(200, 100%, 50%, 0.5);
+}
+
+.dialogbox {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    background-color: white;
+    border: 2px solid silver;
+}
 
 /* Footer */
 footer {

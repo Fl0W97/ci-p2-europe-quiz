@@ -271,9 +271,23 @@ function countdown() {
 // The game is over: Alert, add highscore to highscoreList, not working yet !!!!
 function gameOver() {
     console.log('highscore is: ' + highscore);
-    alert('The game is over. Your highscore is: ' + highscore);
-    localStorage.setItem("mostRecentScore", highscore);
+
+    document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
+    timeLeft = 0;
+
+    // dailog element html
+    const closeButton = document.querySelector("[data-close-modal]");
+    const modal = document.querySelector("[data-modal");
+
+    modal.showModal();
+
+    closeButton.addEventListener("click", () => {
+    modal.close();
     window.location.replace('/end.html');
+    });
+    
+    localStorage.setItem("mostRecentScore", highscore);
+    
 }
 
 function saveHighScore(e) {
