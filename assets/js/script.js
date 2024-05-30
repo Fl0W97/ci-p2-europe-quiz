@@ -248,7 +248,7 @@ function checkAnswer() {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
         numberCorrectAnswers++;
         console.log('Show time left:' + timeLeft);
-        highscore = numberCorrectAnswers*10 + timeLeft;
+        highscore = highscore + timeLeft +10;
         document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
         console.log('check is done.')
     } else {
