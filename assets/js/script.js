@@ -148,6 +148,7 @@ function handleUserAnswer(answer) {
 // Function to display the next question or end the quiz if all questions have been answered
 function displayNextQuestion() {
     if (index < totalNumberQuestions) {
+        document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
         displayQuestionAnswer();
         console.log('displayNextQuestion');
         index++;
