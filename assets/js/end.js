@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
 
+    /* username.addEventlistener("keyup", (event) => {
+        saveScoreButton.disabled = !username.vale;
+    }); */
+
     // create a list with score and name in local storage
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
@@ -39,9 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('highScores after push:', highScores);
 
         // Provide some feedback to the user
-        alert("High score saved!");
+        //alert("High score saved!");
 
-        // Optional: Clear the username input after saving
-        usernameInput.value = "";
-    }
+        // dailog element html
+        const closeButton = document.querySelector("[data-close-modal]");
+        const modal = document.querySelector("[data-modal]");
+
+        modal.showModal();
+
+        closeButton.addEventListener("click", () => {
+            modal.close();
+
+            // Optional: Clear the username input after saving
+            usernameInput.value = "";
+
+            // go back to the beginning
+            window.location.replace('/index.html');
+        });
+    };
 });
