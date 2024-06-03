@@ -6,46 +6,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
 
-    /* username.addEventlistener("keyup", (event) => {
-        saveScoreButton.disabled = !username.vale;
-    }); */
+    usernameInput.addEventListener('input', () => {
+        saveScoreButton.disabled = !usernameInput.value.trim();
+    });
+
+    saveScoreButton.addEventListener('click', saveHighScore);
 
     // create a list with score and name in local storage
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
     finalScore.innerText = mostRecentScore;
 
+    // Check if score is valid
     if (mostRecentScore) {
         finalScore.innerText = `Your Score: ${mostRecentScore}`;
     } else {
         finalScore.innerText = 'No score available';
     }
 
-    saveScoreButton.addEventListener('click', saveHighScore);
-
+    // Save highscore in local storage and modal dialog
     function saveHighScore(event) {
         event.preventDefault(); // Prevent the form from submitting if it's inside a form
-        
+
         console.log('clicked the save button');
         const username = usernameInput.value.trim(); // Get the trimmed value from the input field
 
         console.log('username:', username);
         console.log('mostRecentScore:', mostRecentScore);
-    
+
         const score = {
             score: mostRecentScore,
             name: username,
         };
-        
+
         highScores.push(score);
-    
+
         localStorage.setItem('highScores', JSON.stringify(highScores));
         console.log('highScores after push:', highScores);
 
-        // Provide some feedback to the user
-        //alert("High score saved!");
-
-        // dialog element html
+        // dailog element html
         const closeButton = document.querySelector("[data-close-modal]");
         const modal = document.querySelector("[data-modal]");
 
