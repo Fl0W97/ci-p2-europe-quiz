@@ -1,295 +1,154 @@
-// Country-capital database as a nested list
-const CountriesCapitals = [
-    { country: "Albania", capital: "Tirana" },
-    { country: "Andorra", capital: "Andorra la Vella" },
-    { country: "Austria", capital: "Vienna" },
-    { country: "Belarus", capital: "Minsk" },
-    { country: "Belgium", capital: "Brussels" },
-    { country: "Bosnia and Herzegovina", capital: "Sarajevo" },
-    { country: "Bulgaria", capital: "Sofia" },
-    { country: "Croatia", capital: "Zagreb" },
-    { country: "Cyprus", capital: "Nicosia" },
-    { country: "Czech Republic", capital: "Prague" },
-    { country: "Denmark", capital: "Copenhagen" },
-    { country: "Estonia", capital: "Tallin" },
-    { country: "Finland", capital: "Helsinki" },
-    { country: "France", capital: "Paris" },
-    { country: "Georgia", capital: "Tbilisi" },
-    { country: "Germany", capital: "Berlin" },
-    { country: "Gibraltar (UK)", capital: "Gibraltar" },
-    { country: "Greece", capital: "Athens" },
-    { country: "Hungary", capital: "Budapest" },
-    { country: "Iceland", capital: "Reykjavik" },
-    { country: "Ireland", capital: "Dublin" },
-    { country: "Italy", capital: "Rome" },
-    { country: "Kosovo", capital: "Pristina" },
-    { country: "Latvia", capital: "Riga" },
-    { country: "Liechtenstein", capital: "Vaduz" },
-    { country: "Lithuania", capital: "Vilnius" },
-    { country: "Luxembourg", capital: "Luxembourg City" },
-    { country: "Macedonia", capital: "Skopje" },
-    { country: "Malta", capital: "Valletta" },
-    { country: "Moldova", capital: "Chisinau" },
-    { country: "Monaco", capital: "Monaco" },
-    { country: "Montenegro", capital: "Podgorica" },
-    { country: "Netherlands", capital: "Amsterdam" },
-    { country: "Norway", capital: "Oslo" },
-    { country: "Poland", capital: "Warsaw" },
-    { country: "Portugal", capital: "Lisbon" },
-    { country: "Romania", capital: "Bucharest" },
-    { country: "Russia", capital: "Moscow" },
-    { country: "San Marino", capital: "San Marino" },
-    { country: "Serbia", capital: "Belgrade" },
-    { country: "Slovakia", capital: "Bratislava" },
-    { country: "Slovenia", capital: "Ljubljana" },
-    { country: "Spain", capital: "Madrid" },
-    { country: "Sweden", capital: "Stockholm" },
-    { country: "Switzerland", capital: "Bern" },
-    { country: "Turkey", capital: "Ankara" },
-    { country: "Ukraine", capital: "Kiev" },
-    { country: "United Kingdom", capital: "London" },
-    { country: "Vatican City", capital: "Vatican City" }
-];
+<!DOCTYPE html>
+<html lang="en">
 
-// Total number of question is defined and not changeable for the user
-let totalNumberQuestions = 5;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-// Boxes for hide/display
-let box_answers = document.getElementById("box_answers");
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Quiz about European states and its capitals.">
+    <meta name="keywords" content="Europe, quiz, Quiz, questonaire, countries, European states, capital, city, EU">
 
-// Initialize variables/constants
-let index = 0; // Initialize index outside the function
-let modeTypeQuestion;
-let wrongAnswer;
-let correctAnswer;
-let userAnswer;
+    <!-- Title -->
+    <title>Europe Quiz</title>
 
-// Answers multiple choice
-const answer1 = document.getElementById("box1");
-const answer2 = document.getElementById("box2");
-const answer3 = document.getElementById("box3");
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-// Highscore
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-let numberCorrectAnswers;
-let highscore;
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-// Timer
-let timeLeft;
-let elem = document.getElementById('timer');
-let timerId = setInterval(countdown, 1000);
+</head>
 
-// DOM load
-document.addEventListener("DOMContentLoaded", function () {
-    // Add event listener to the 'Start Quiz' button
-    const startQuizButton = document.getElementById('button');
-    startQuizButton.addEventListener('click', startQuiz);
+<body id="bg-euro-map">
+    <!-- logo, navigation -->
+    <header>
+        <a href="index.html" aria-label="Redicrection to index page (does not open in a new tab)">
+            <h1 id="logo">Europe Quiz<img src="" alt="" class=""></h1>
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="index.html" class="active">Quiz</a>
+                </li>
+                <li>
+                    <a href="highscore.html">Highscore</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    document.getElementById('quiz_questions').style.visibility = 'hidden';
+    <!-- Main content -->
+    <main>
+        <!-- intro, game set up -->
+        <section class="section_style" id="quiz_settings">
+            <div class="inner_section_style">
 
-    // Add event listeners to multiple choice answer options
-    const answerElements = document.getElementsByClassName("answer");
-    for (let i = 0; i < answerElements.length; i++) {
-        answerElements[i].addEventListener('click', clickAnswer);
-    }
-});
+                <h2>
+                    Welcome to the Europe Capitals Quiz!
+                </h2>
+                <p>
+                    Test your knowledge of European capitals. Answer 40 multiple-choice questions,
+                    earn 10 points for each correct answer, and score bonus points for every second you save. Speed and
+                    accuracy are key.
+                </p>
+                <p>
+                    Switch it up with our toggle function to choose between identifying capitals or countries.
+                    Ready to show off your skills? Let’s get started! Good luck!
+                </p>
+            </div>
+            <div class="inner_section_style">
+                <div class="main_switch_div">
+                    <!-- switch -->
+                    <div class="switch_div">
+                        <h4>Question type</h4>
+                    </div>
+                    <div class="switch_div">
+                        <label class="switch" for="CheckboxQuestion">
+                            <input type="checkbox" id="CheckboxQuestion" name="CheckboxQuestion">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="switch_div">
+                        <p>Capital/ Country</p>
+                    </div>
+                </div>
+                <div class="main_switch_div">
+                    <!-- switch -->
+                    <div class="switch_div">
+                        <h4>Number of Questions</h4>
+                    </div>
+                    <div class="switch_div">
+                        <label class="switch" for="CheckboxNumber">
+                            <input type="checkbox" id="CheckboxNumber" name="CheckboxNumber">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="switch_div">
+                        <p>20/40</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inner_section_style">
+                <div>
+                    <button type="button" class="btn2" id="button">Start Quiz</button>
+                </div>
+            </div>
+        </section>
 
-// Function to start the quiz
-function startQuiz() {
-    // Set indext and highscore locally to 0
-    index = 0;
-    numberCorrectAnswers = 0;
-    highscore = 0;
+        <!-- questions and answers -->
+        <section class="section_style" id="quiz_questions">
+            <div id="numberOfQuestion">
+            </div>
+            <div id="box_questions">
+                <p class="question"></p>
+            </div>
+            <div id="Timer"></div>
+            <div id="box_answers">
+                <div class="answer" id="box1">
+                </div>
+                <div class="answer" id="box2">
+                </div>
+                <div class="answer" id="box3">
+                </div>
+            </div>
+            <div id="feedbackForUser">
+            </div>
+            <div id="highscore">
+            </div>
+            <div>
+                <dialog data-modal class="dialogbox">
+                    <div><h3>The game is over.</h3></div>
+                    <button class="btn2" data-close-modal>Okay</button>
+                </dialog>
+            </div>
+        </section>
+    </main>
 
-    // Manage visibility of elements
-    document.getElementById('quiz_questions').style.visibility = 'inherit';
-    document.getElementById('quiz_settings').style.visibility = 'hidden';
+    <!-- Footer -->
+    <footer>
+        <ul class="social-networks">
+            <li>
+                <a href="https://www.linkedin.com/in/florian-guldner-4a684897/" target="_blank" rel="noopener"
+                    aria-label="Redicrection to Linkedin page (opens in a new tab)">
+                    <i class="fa-brands fa-linkedin" style="color:blue"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/Fl0W97" target="_blank" rel="noopener"
+                    aria-label="Redicrection to GitHub page (opens in a new tab)">
+                    <i class="fa-brands fa-square-github" style="color: blue"></i></a>
+            </li>
+        </ul>
 
-    // Shuffle database
-    shuffle(CountriesCapitals);
-    console.log(CountriesCapitals);
+        <!-- Font Awesome kit -->
+        <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 
-    // Settings
-    saveModeSettings();
-    console.log('switch is set to' + modeTypeQuestion);
-    console.log('total number of questions is' + totalNumberQuestions);
+    </footer>
 
-    // Display questions
-    displayNextQuestion();
-}
+    <script src="assets/js/script5.js"></script>
+</body>
 
-// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        // Generate a random index between 0 and i (inclusive)
-        const randomIndex1 = Math.floor(Math.random() * (i + 1));
-
-        // Swap elements at current index and random index
-        let temp = array[i]; // Store the current element in a temporary variable
-        array[i] = array[randomIndex1]; // Assign the randomly selected element to the current index
-        array[randomIndex1] = temp; // Assign the stored current element to the randomly selected index
-    }
-}
-
-// Function to handle answer clicks
-function clickAnswer(event) {
-    const selectedAnswer = event.target.textContent;
-    handleUserAnswer(selectedAnswer);
-}
-
-// Function to handle the user's answer
-function handleUserAnswer(answer) {
-    userAnswer = answer;
-    checkAnswer();
-    // After checking the answer, proceed to the next question
-    displayNextQuestion();
-}
-
-// Function to display the next question or end the quiz if all questions have been answered
-function displayNextQuestion() {
-    if (index < totalNumberQuestions) {
-        document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
-        displayQuestionAnswer();
-        console.log('displayNextQuestion');
-        index++;
-        timeLeft = 20;
-        countdown();
-        console.log('display index:' + index);
-        console.log('Number correct Answers:' + numberCorrectAnswers);
-        console.log('highscore:' + highscore);
-    } else {
-        // No more questions left, end of the game
-        gameOver();
-    }
-}
-
-// Function to handle the user's input
-function handleUserInput(userInput) {
-    userAnswer = userInput;
-    checkAnswer();
-    // After checking the answer, proceed to the next question
-    displayNextQuestion();
-}
-
-function saveModeSettings() {
-    // Get the checkbox
-    var checkBoxQ = document.getElementById('CheckboxQuestion');
-
-    // Show the status of the checkbox
-    if (checkBoxQ.checked == true) {
-        console.log('Question checkbox is checked');
-        modeTypeQuestion = "capital";
-    } else {
-        console.log('Question checkbox is unchecked');
-        modeTypeQuestion = "country";
-    }
-}
-
-// Show question depending on the setting choice
-function displayQuestionAnswer() {
-    switch (modeTypeQuestion) {
-        case 'capital':
-            displayQuestionCapital();
-            displayMultipleChoice();
-            console.log('capital');
-            console.log('Answer User:' + userAnswer);
-            break;
-        case 'country':
-            displayQuestionCountry();
-            displayMultipleChoice();
-            console.log('country');
-            console.log('Answer User:' + userAnswer);
-    }
-}
-
-// Show question and define the right capital according to the index 
-function displayQuestionCapital() {
-    const currentQuestion = CountriesCapitals[index];
-
-    document.getElementById("box_questions").innerHTML = "What is the capital of " + currentQuestion.country + " ?";
-    correctAnswer = currentQuestion.capital;
-    console.log('correct answer defined. It is ' + correctAnswer);
-}
-
-// Show question and define the right country according to the index
-function displayQuestionCountry() {
-    const currentQuestion = CountriesCapitals[index];
-
-    document.getElementById("box_questions").innerHTML = currentQuestion.capital + " is the capital of which country?";
-    correctAnswer = currentQuestion.country;
-    console.log('correct answer defined. It is ' + correctAnswer);
-}
-
-function displayMultipleChoice() {
-    // Using the modulo operator % to wrap around to the beginning of the array if the index exceeds its length
-    if (modeTypeQuestion == "country") {
-        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
-        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].country;
-    } else if (modeTypeQuestion === "capital") {
-        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].capital;
-        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].capital;
-    }
-
-    let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
-    console.log(allAnswers);
-
-    // Shuffle through list allAnswers so that the right answer is not always on the same index
-    shuffle(allAnswers);
-    console.log('shuffle baby');
-
-    // Provide input for answers in HTML
-    answer1.innerHTML = allAnswers[0];
-    answer2.innerHTML = allAnswers[1];
-    answer3.innerHTML = allAnswers[2];
-}
-
-// Check answer and adjust highscore
-function checkAnswer() {
-    if (userAnswer === correctAnswer) {
-        document.getElementById("feedbackForUser").innerHTML = "Correct!";
-        numberCorrectAnswers++;
-        console.log('Show time left:' + timeLeft);
-        highscore = highscore + timeLeft +10;
-        document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
-        console.log('check is done.')
-    } else {
-        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
-    }
-}
-
-// TIMER
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    gameOver();
-  } else {
-    elem.innerHTML = timeLeft + ' seconds remaining';
-    timeLeft--;
-  }
-}
-
-// The game is over: Alert, add highscore to highscoreList, not working yet !!!!
-function gameOver() {
-    console.log('highscore is: ' + highscore);
-
-    document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
-    timeLeft = 0;
-
-    // dailog element html
-    const closeButton = document.querySelector("[data-close-modal]");
-    const modal = document.querySelector("[data-modal");
-
-    modal.showModal();
-
-    closeButton.addEventListener("click", () => {
-    modal.close();
-    window.location.replace('/end.html');
-    });
-    
-    localStorage.setItem("mostRecentScore", highscore);
-    
-}
-
-function saveHighScore(e) {
-    console.log("clicked the save button!");
-}
+</html>
