@@ -96,7 +96,7 @@ main {
 
 .section_style {
     margin: auto;
-    width: 90%;
+    width: 60%;
     padding: 20px;
     background-color: rgba(255, 255, 255, .8);
     text-align: center;
@@ -284,6 +284,13 @@ footer {
         margin-top: 93px;
     }
 
+    .section_style {
+        margin: auto;
+        width: 90%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, .8);
+        text-align: center;
+    }
 
     #box_questions {
         flex-direction: column;
@@ -315,9 +322,8 @@ footer {
     
     .menu li a:hover {
         color: #0f9d58;
-        padding-left: 5px;
-        border-left: 5px solid #0f9d58;
         font-weight: bold;
+        border-bottom: 2px solid #c0643d;
     }
 
  }

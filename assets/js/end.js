@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Provide some feedback to the user
         //alert("High score saved!");
 
-        // dailog element html
+        // dialog element html
         const closeButton = document.querySelector("[data-close-modal]");
         const modal = document.querySelector("[data-modal]");
 
