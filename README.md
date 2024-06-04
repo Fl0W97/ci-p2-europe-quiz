@@ -242,6 +242,12 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 
 ### Code
 
-| Description  | Source | URL |
-| ------------- | ------------- | ------------- |
-| Generate Markdown file  | GitHUb | https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+| No | Description  | Source | URL |
+| --- |------------- | ------------- | ------------- |
+|1| Generate Markdown file  | GitHUb | https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+|2| Create a Toggle Switch | w3schools.com | https://www.w3schools.com/howto/howto_css_switch.asp
+|3| Quiz basics | Youtube.com | https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=8
+|4| Use localStorage | Youtube.com | https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=8
+|5| Countdown | Google Search | https://codepen.io/ideaguy1974/pen/pZBBLK
+|6| Shuffle an array | Google Search | https://javascript.info/task/shuffle; https://stackoverflow.com/questions/68674385/is-there-a-way-to-randomize-an-array-to-a-certain-length-in-js
+|7| Show highscore |  | https://stackoverflow.com/questions/58572752/how-to-display-this-js-array-in-a-html-list 
