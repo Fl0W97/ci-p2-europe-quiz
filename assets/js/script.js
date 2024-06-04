@@ -141,11 +141,6 @@ function clickAnswer(event) {
 function handleUserAnswer(answer) {
     userAnswer = answer;
     checkAnswer();
-    // After checking the answer, proceed to the next question
-    let timeout;
-
-    //timeout = setTimeout(displayNextQuestion, 3000);
-    
     displayNextQuestion();
 }
 
@@ -265,11 +260,11 @@ function checkAnswer() {
         document.getElementById("feedbackForUser").innerHTML = "Correct!";
         numberCorrectAnswers++;
         highscore = highscore + timeLeft + 10;
-        document.getElementById("highscore").innerHTML = "Highscore is: " + highscore;
+        document.getElementById("numberCorrectAnswers").innerHTML = "Right answers: " + numberCorrectAnswers;
         console.log('check is done.');
         console.log('Show time left:' + timeLeft);
     } else {
-        document.getElementById("feedbackForUser").innerHTML = "Incorrect!!! The correct answer is " + correctAnswer;
+        document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
 }
 
