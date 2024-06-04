@@ -81,6 +81,11 @@ let timerId = setInterval(countdown, 1000);
 
 // DOM load
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
+    
     // Add event listener to the 'Start Quiz' button
     const startQuizButton = document.getElementById('button');
     startQuizButton.addEventListener('click', startQuiz);
@@ -118,7 +123,7 @@ function startQuiz() {
     displayNextQuestion();
 }
 
-// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
+// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm, ***CODE CREDIT No 7 Readme.md***
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         // Generate a random index between 0 and i (inclusive)
