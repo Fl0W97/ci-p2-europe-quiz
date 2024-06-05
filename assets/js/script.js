@@ -1,55 +1,4 @@
-// Country-capital database as a nested list
-const CountriesCapitals = [
-    { country: "Albania", capital: "Tirana" },
-    { country: "Andorra", capital: "Andorra la Vella" },
-    { country: "Austria", capital: "Vienna" },
-    { country: "Belarus", capital: "Minsk" },
-    { country: "Belgium", capital: "Brussels" },
-    { country: "Bosnia and Herzegovina", capital: "Sarajevo" },
-    { country: "Bulgaria", capital: "Sofia" },
-    { country: "Croatia", capital: "Zagreb" },
-    { country: "Cyprus", capital: "Nicosia" },
-    { country: "Czech Republic", capital: "Prague" },
-    { country: "Denmark", capital: "Copenhagen" },
-    { country: "Estonia", capital: "Tallin" },
-    { country: "Finland", capital: "Helsinki" },
-    { country: "France", capital: "Paris" },
-    { country: "Georgia", capital: "Tbilisi" },
-    { country: "Germany", capital: "Berlin" },
-    { country: "Gibraltar (UK)", capital: "Gibraltar" },
-    { country: "Greece", capital: "Athens" },
-    { country: "Hungary", capital: "Budapest" },
-    { country: "Iceland", capital: "Reykjavik" },
-    { country: "Ireland", capital: "Dublin" },
-    { country: "Italy", capital: "Rome" },
-    { country: "Kosovo", capital: "Pristina" },
-    { country: "Latvia", capital: "Riga" },
-    { country: "Liechtenstein", capital: "Vaduz" },
-    { country: "Lithuania", capital: "Vilnius" },
-    { country: "Luxembourg", capital: "Luxembourg City" },
-    { country: "Macedonia", capital: "Skopje" },
-    { country: "Malta", capital: "Valletta" },
-    { country: "Moldova", capital: "Chisinau" },
-    { country: "Monaco", capital: "Monaco" },
-    { country: "Montenegro", capital: "Podgorica" },
-    { country: "Netherlands", capital: "Amsterdam" },
-    { country: "Norway", capital: "Oslo" },
-    { country: "Poland", capital: "Warsaw" },
-    { country: "Portugal", capital: "Lisbon" },
-    { country: "Romania", capital: "Bucharest" },
-    { country: "Russia", capital: "Moscow" },
-    { country: "San Marino", capital: "San Marino" },
-    { country: "Serbia", capital: "Belgrade" },
-    { country: "Slovakia", capital: "Bratislava" },
-    { country: "Slovenia", capital: "Ljubljana" },
-    { country: "Spain", capital: "Madrid" },
-    { country: "Sweden", capital: "Stockholm" },
-    { country: "Switzerland", capital: "Bern" },
-    { country: "Turkey", capital: "Ankara" },
-    { country: "Ukraine", capital: "Kiev" },
-    { country: "United Kingdom", capital: "London" },
-    { country: "Vatican City", capital: "Vatican City" }
-];
+
 
 // Total number of question is defined and not changeable for the user
 let totalNumberQuestions;
@@ -81,11 +30,6 @@ let timerId = setInterval(countdown, 1000);
 
 // DOM load
 document.addEventListener("DOMContentLoaded", function () {
-
-
-
-
-    
     // Add event listener to the 'Start Quiz' button
     const startQuizButton = document.getElementById('button');
     startQuizButton.addEventListener('click', startQuiz);
@@ -123,7 +67,7 @@ function startQuiz() {
     displayNextQuestion();
 }
 
-// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm, ***CODE CREDIT No 7 Readme.md***
+// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         // Generate a random index between 0 and i (inclusive)
@@ -239,11 +183,11 @@ function displayQuestionCountry() {
 function displayMultipleChoice() {
     // Using the modulo operator % to wrap around to the beginning of the array if the index exceeds its length
     if (modeTypeQuestion == "country") {
-        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
-        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].country;
+        let wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
+        let wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].country;
     } else if (modeTypeQuestion === "capital") {
-        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].capital;
-        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].capital;
+        let wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].capital;
+        let wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].capital;
     }
 
     let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
@@ -299,7 +243,7 @@ function gameOver() {
 
     closeButton.addEventListener("click", () => {
     modal.close();
-    window.location.replace('/end.html');
+    window.location.replace('end.html');
     });
     
     localStorage.setItem("mostRecentScore", highscore);
