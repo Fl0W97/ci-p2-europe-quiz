@@ -20,7 +20,7 @@ Desktop view: Elements are aligned to the center. Toggle is not used, hover effe
 There are three media query breakpoints used: (320px), 768px, 992px
 
 #### Desktop view
-<img src="" alt="image shows navigation desktop">
+<img src="images_README/Notebook_view.png" alt="image shows navigation desktop">
 
 #### Tablet view
 <img src="" alt="image shows navigation tablet">
@@ -34,16 +34,18 @@ Title and logo are above the navigation. Depending on the media query the header
 Header
 <img src="" alt="image shows header">
 
-### quiz.html
-The landing page contains a short introduction, the game settings and the first question of the quiz.
+### index.html
+The landing page contains a short introduction, the game settings. To start the quiz the user has to click the "start quiz" button.
+In connection the first question appears with a multiply choice of three options.
 
-quiz.html
-<img src="" alt="">
+
+html.html
+<img src="images_README/Notebook_view.png" alt="">
 
 ### highscore.html
 
 
-highscroe.html
+highscore.html
 <img src="" alt="">
 
 ### about.html
@@ -152,6 +154,9 @@ No errors were returned
 
 <img src="" alt="image shows preview of index.html">
 
+#### [JS Validator](https://codebeautify.org/jsvalidate)
+
+
 #### Accessability
 I confirm that the selected colors and fonts are easy to read and accessible by using Lighthouse in devtools (Chrome).
 
@@ -251,4 +256,5 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 |5| Countdown | Google Search | https://codepen.io/ideaguy1974/pen/pZBBLK
 |6| Shuffle an array | Google Search | https://javascript.info/task/shuffle; https://stackoverflow.com/questions/68674385/is-there-a-way-to-randomize-an-array-to-a-certain-length-in-js
 |7| Show highscore | Forum stackoverflow.com | https://stackoverflow.com/questions/58572752/how-to-display-this-js-array-in-a-html-list 
-|8| visibility | 
+|8| visibility | ... | 
+|9| social icons | Code Institude | project runaway 

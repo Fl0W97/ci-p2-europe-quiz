@@ -1,6 +1,6 @@
 // DOM load
 document.addEventListener("DOMContentLoaded", function () {
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+  let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
   // reused code: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
   
