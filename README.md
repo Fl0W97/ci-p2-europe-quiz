@@ -47,11 +47,7 @@ In connection the first question appears with a multiply choice of three options
 | Shuffle function | To keep up the interest and challenge of the user every new round the order of the questions is random by using the Fisher-Yates shuffle algorithm. In addtion, it is reused again for shuffling the multiple choice answers to avoid also here a consistency.| <img src="" alt="image shows questions ands answers"> |
 | Timer | To challenge the user even more there is a timer which starts to count down from 20 seconds after each questions. When the counter counts ti 0 the game is over. In addition, the user gets additional points for each saved second. This encourage the user to speed up and get rewarded. | <img src="images_README/index_count_remaining_seconds.PNG" alt="image shows the timer"> |
 | Feedback | After each selected answer the user gets a feedback whether the answer was correct or incorrect. This helps to learn the correct answer. | <img src="images_README/index_give_feedback.PNG" alt="image shows the feedback for the user after each answer"> |
-
-| Feedback | After each selected answer the user gets a feedback whether the answer was correct or incorrect. This helps to learn the correct answer. | <img src="images_README/index_give_feedback.PNG" alt="image shows the feedback for the user after each answer"> |
-
-
--multiply choice (with eventListener, shuffle array, proide random 3 options, check Answer)
+| Question counter | Through the game the user sees the number of correct questions. | <img src="images_README/index_show_number_of_right_answers.PNG" alt="image shows the number of correct questions"> |
 
 html.html
 <img src="images_README/Notebook_view.png" alt="">
@@ -59,14 +55,20 @@ html.html
 ### highscore.html
 
 
-features:
-- use localStorage
+#### Features
+| Feature | Description  | images |
+| --- |------------- | ------------- |
+| localStorage | The highscore is counted in script.js and storaged together with the user's name in local storage by using  localStorage.setItem("mostRecentScore", highscore); . The name is storaged in end.js | see below |
+| Top 10 |  and by using highScores.splice(10); the max number of 10 list items is generated. | see below |
+| Best of the top | There is a list which collects all users and its highscores. It is sorted from top to bottom each time when a new entry is added. | see below |
 
 highscore.html
-<img src="" alt="">
+<img src="images_README/highscore.PNG" alt="image shows hishscores">
 
 ### end.html
 
+#### Features
+| Question counter | Through the game the user sees the number of correct questions. | <img src="images_README/index_show_number_of_right_answers.PNG" alt="image shows the number of correct questions"> |
 features:
 - store highscore in localStorage
 - input field input name

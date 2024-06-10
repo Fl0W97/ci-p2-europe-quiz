@@ -28,11 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function saveHighScore(event) {
         event.preventDefault(); // Prevent the form from submitting if it's inside a form
 
-        console.log('clicked the save button');
         const username = usernameInput.value.trim(); // Get the trimmed value from the input field
-
-        console.log('username:', username);
-        console.log('mostRecentScore:', mostRecentScore);
 
         const score = {
             score: mostRecentScore,
