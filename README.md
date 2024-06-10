@@ -38,20 +38,29 @@ Header
 The landing page contains a short introduction, the game settings. To start the quiz the user has to click the "start quiz" button.
 In connection the first question appears with a multiply choice of three options.
 
+features:
+-slider
+-button to start quiz
+-multiply choice (with eventListener, shuffle array, proide random 3 options, check Answer)
 
 html.html
 <img src="images_README/Notebook_view.png" alt="">
 
 ### highscore.html
 
+features:
+- use localStorage
 
 highscore.html
 <img src="" alt="">
 
-### about.html
+### end.html
 
+features:
+- store highscore in localStorage
+- input field input name
 
-about.html
+end.html
 <img src="" alt="">
 
 
@@ -156,6 +165,8 @@ No errors were returned
 
 #### [JS Validator](https://codebeautify.org/jsvalidate)
 
+add /*jshint esversion: 6 */  in the validator to recognize variables like const, let
+
 
 #### Accessability
 I confirm that the selected colors and fonts are easy to read and accessible by using Lighthouse in devtools (Chrome).
@@ -257,4 +268,5 @@ Here the live link: https://fl0w97.github.io/CI_p1_meditation-_website/index.htm
 |6| Shuffle an array | Google Search | https://javascript.info/task/shuffle; https://stackoverflow.com/questions/68674385/is-there-a-way-to-randomize-an-array-to-a-certain-length-in-js
 |7| Show highscore | Forum stackoverflow.com | https://stackoverflow.com/questions/58572752/how-to-display-this-js-array-in-a-html-list 
 |8| visibility | ... | 
-|9| social icons | Code Institude | project runaway 
+|9| social icons | Code Institude | project runaway
+|10| slider | https://www.w3schools.com/howto/howto_css_switch.asp
