@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             usernameInput.value = "";
 
             // go back to the beginning
-            window.location.replace('/index.html');
+            window.location.replace('index.html');
         });
-    };
+    }
 });

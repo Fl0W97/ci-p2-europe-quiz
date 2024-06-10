@@ -49,18 +49,15 @@ function startQuiz() {
 
     // Shuffle database
     shuffle(CountriesCapitals);
-    console.log(CountriesCapitals);
 
     // Settings
     saveModeSettings();
-    console.log('switch is set to ' + modeTypeQuestion);
-    console.log('total number of questions is ' + totalNumberQuestions);
 
     // Display questions
     displayNextQuestion();
 }
 
-// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm
+// Function to shuffle arrays, according to Fisher-Yates shuffle algorithm - check Readme.md code credentials no. 6
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         // Generate a random index between 0 and i (inclusive)
@@ -91,29 +88,14 @@ function displayNextQuestion() {
     if (index < totalNumberQuestions) {
         document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
         displayQuestionAnswer();
-        console.log('displayNextQuestion');
         index++;
         timeLeft = 20;
         countdown();
-
-        console.log('start countdown');
-        console.log('display index:' + index);
-        console.log('highscore:' + highscore);
-        console.log('Number correct Answers:' + numberCorrectAnswers);
     } else {
         // No more questions left, end of the game
         gameOver();
     }
 }
-
-/*
-// Function to handle the user's input
-function handleUserInput(userInput) {
-    userAnswer = userInput;
-    checkAnswer();
-    // After checking the answer, proceed to the next question
-    displayNextQuestion();
-}*/
 
 function saveModeSettings() {
     // Get the checkbox
@@ -122,19 +104,15 @@ function saveModeSettings() {
 
     // Show the status of the checkbox
     if (checkBoxQ.checked == true) {
-        console.log('Question checkbox is checked');
         modeTypeQuestion = "capital";
     } else {
-        console.log('Question checkbox is unchecked');
         modeTypeQuestion = "country";
     }
 
     // Define number of questions
     if (checkBoxN.checked == true) {
-        console.log('Number checkbox is checked');
         totalNumberQuestions = 40;
     } else {
-        console.log('Number checkbox is unchecked');
         totalNumberQuestions = 20;
     }
 }
@@ -145,14 +123,10 @@ function displayQuestionAnswer() {
         case 'capital':
             displayQuestionCapital();
             displayMultipleChoice();
-            console.log('capital');
-            console.log('Answer User:' + userAnswer);
             break;
         case 'country':
             displayQuestionCountry();
             displayMultipleChoice();
-            console.log('country');
-            console.log('Answer User:' + userAnswer);
     }
 }
 
@@ -162,7 +136,6 @@ function displayQuestionCapital() {
 
     document.getElementById("box_questions").innerHTML = "What is the capital of " + currentQuestion.country + " ?";
     correctAnswer = currentQuestion.capital;
-    console.log('correct answer defined. It is ' + correctAnswer);
 }
 
 // Show question and define the right country according to the index
@@ -171,13 +144,12 @@ function displayQuestionCountry() {
 
     document.getElementById("box_questions").innerHTML = currentQuestion.capital + " is the capital of which country?";
     correctAnswer = currentQuestion.country;
-    console.log('correct answer defined. It is ' + correctAnswer);
 }
 
 function displayMultipleChoice() {
     // Using the modulo operator % to wrap around to the beginning of the array if the index exceeds its length
-    let wrongAnswer1
-    let wrongAnswer2
+    let wrongAnswer1;
+    let wrongAnswer2;
     
     if (modeTypeQuestion == "country") {
         wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
@@ -188,11 +160,9 @@ function displayMultipleChoice() {
     }
 
     let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
-    console.log(allAnswers);
 
     // Shuffle through list allAnswers so that the right answer is not always on the same index
     shuffle(allAnswers);
-    console.log('shuffle baby');
 
     // Provide input for answers in HTML
     answer1.innerHTML = allAnswers[0];
@@ -207,8 +177,6 @@ function checkAnswer() {
         numberCorrectAnswers++;
         highscore = highscore + timeLeft + 10;
         document.getElementById("numberCorrectAnswers").innerHTML = "Right answers: " + numberCorrectAnswers;
-        console.log('check is done.');
-        console.log('Show time left:' + timeLeft);
     } else {
         document.getElementById("feedbackForUser").innerHTML = "Incorrect! The correct answer is " + correctAnswer;
     }
@@ -227,8 +195,6 @@ function countdown() {
 
 // The game is over
 function gameOver() {
-    console.log('highscore is: ' + highscore);
-
     document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
     timeLeft = 0;
 
