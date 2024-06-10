@@ -1,3 +1,4 @@
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -39,7 +40,7 @@ header a {
 }
 
 h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Comic', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #252525;
@@ -130,7 +131,7 @@ main {
     margin-top: 5px;
 }
 
-/****** start switch topic  https://www.w3schools.com/howto/howto_css_switch.asp ******/
+/****** start switch, code credits no.2:  https://www.w3schools.com/howto/howto_css_switch.asp ******/
 
  /* The switch - the box around the slider */
  .switch {
