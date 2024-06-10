@@ -1,15 +1,9 @@
-
-
 // Total number of question is defined and not changeable for the user
 let totalNumberQuestions;
-
-// Boxes for hide/display
-let box_answers = document.getElementById("box_answers");
 
 // Initialize variables/constants
 let index = 0; // Initialize index outside the function
 let modeTypeQuestion;
-let wrongAnswer;
 let correctAnswer;
 let userAnswer;
 
@@ -19,7 +13,6 @@ const answer2 = document.getElementById("box2");
 const answer3 = document.getElementById("box3");
 
 // Highscore
-const mostRecentScore = localStorage.getItem('mostRecentScore');
 let numberCorrectAnswers;
 let highscore;
 
@@ -182,12 +175,15 @@ function displayQuestionCountry() {
 
 function displayMultipleChoice() {
     // Using the modulo operator % to wrap around to the beginning of the array if the index exceeds its length
+    let wrongAnswer1
+    let wrongAnswer2
+    
     if (modeTypeQuestion == "country") {
-        let wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
-        let wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].country;
+        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].country;
+        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].country;
     } else if (modeTypeQuestion === "capital") {
-        let wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].capital;
-        let wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].capital;
+        wrongAnswer1 = CountriesCapitals[(index + 1) % CountriesCapitals.length].capital;
+        wrongAnswer2 = CountriesCapitals[(index + 2) % CountriesCapitals.length].capital;
     }
 
     let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
