@@ -106,13 +106,14 @@ function displayNextQuestion() {
     }
 }
 
+/*
 // Function to handle the user's input
 function handleUserInput(userInput) {
     userAnswer = userInput;
     checkAnswer();
     // After checking the answer, proceed to the next question
     displayNextQuestion();
-}
+}*/
 
 function saveModeSettings() {
     // Get the checkbox
