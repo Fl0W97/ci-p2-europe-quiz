@@ -93,7 +93,7 @@ main {
 }
 
 #bg-euro-map {
-    background: url("/../assets/images/bg_euro_map.jpg") no-repeat center /cover; 
+    background: url("assets/images/bg_euro_map.jpg") no-repeat center /cover; 
 }
 
 .bg-transparent {
@@ -332,6 +332,7 @@ footer {
  @media screen and (min-width: 768px) {
 
     h1 {
+        font-size: 105%;
         padding-bottom: 5px;
     }
 
