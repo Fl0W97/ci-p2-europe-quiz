@@ -94,7 +94,7 @@ main {
 }
 
 #bg-euro-map {
-    background: url("assets/images/bg_euro_map.jpg") no-repeat center /cover; 
+    background: url("../images/bg_euro_map.jpg") no-repeat center /cover; 
 }
 
 .bg-transparent {
