@@ -18,6 +18,7 @@ Due to responsive design requirements the behaviour and position of the navigati
 Mobile view: Elements are aligned to the center. The burger tab is not needed and not used. The multiple choice answers are organized on top of each other by using the standard div logic.
 
 Tablet view: Elements are aligned to the center. Toggle is not used, hover effect is available.The multiple choice answers are organized in a row. 
+
 <img src="images_README/box_answers_flex-direction.PNG" alt="image shows code snipped in css using flex-direction: row">
 
 Desktop view: Elements are aligned to the center. Toggle is not used, hover effect available. The multiple choice answers are organized in a row. 
@@ -27,7 +28,7 @@ There are three media query breakpoints used: (320px), 768px, 992px
 ### The header elements
 Title and logo are above the navigation. The title says EUROPE and the logo ends the title with letters Q, U, I and Z in a box. Depending on the media query the navigation gets slightly bigger (font-size: 110%). The content in the header is consistent through all three html. pages. It contains two links and a styling for the active site. The header is fixed to the top.
 
-<img src="images_README/navigation_view.PNG" alt="image shows header">
+<img src="images_README/navigation_view.PNG" alt="image shows header" width="400px">
 
 ### The main elements
 The main elements differ in each html. It is positioned via top-margin: 100px. In the following all features of the three pages are described.
@@ -36,15 +37,6 @@ The main elements differ in each html. It is positioned via top-margin: 100px. I
 ### index.html
 The landing page contains a short introduction, the game settings and the "start quiz" button for the quiz.
 In connection the first question appears with a multiple choice of three options.
-
-#### Desktop view
-<img src="images_README/Notebook_view.png" alt="image shows navigation desktop">
-
-#### Tablet view
-<img src="images_README/tablet_view.png" alt="image shows navigation tablet">
-
-#### Mobile view
-<img src="images_README/phone_view.PNG" alt="image shows navigation mobile">
 
 #### Features:
 
@@ -57,8 +49,16 @@ In connection the first question appears with a multiple choice of three options
 | Feedback | After each selected answer the user gets a feedback whether the answer was correct or incorrect. This helps to learn the correct answer. | <img src="images_README/index_give_feedback.PNG" alt="image shows the feedback for the user after each answer"> |
 | Question counter | Through the game the user sees the number of correct questions. | <img src="images_README/index_show_number_of_right_answers.PNG" alt="image shows the number of correct questions"> |
 
-html.html
-<img src="images_README/Notebook_view.png" alt="image shows some features">
+
+#### Mobile view
+<img src="images_README/phone_view.PNG" alt="image shows navigation mobile" width="300px">
+
+#### Tablet view
+<img src="images_README/tablet_view.png" alt="image shows navigation tablet" width="400px">
+
+#### Desktop view
+<img src="images_README/Notebook_view.png" alt="image shows navigation desktop" width="650px">
+
 
 ### end.html
 
@@ -72,7 +72,8 @@ html.html
 
 
 end.html
-<img src="images_README/end_game_over.PNG" alt="image shows the end display of the game">
+
+<img src="images_README/end_game_over.PNG" alt="image shows the end display of the game" width="500px">
 
 ### highscore.html
 
@@ -82,9 +83,10 @@ end.html
 | Top 10 |  and by using highScores.splice(10); the max number of 10 list items is generated. | see below |
 | Best at the top | There is a list which collects all users and highscores. It is sorted from top to bottom each time when a new entry is added. | see below |
 
-highscore.html
-<img src="images_README/highscore.PNG" alt="image shows hishscores">
 
+highscore.html
+
+<img src="images_README/highscore.PNG" alt="image shows hishscores" width="500px">
 
 ### The Footer
 The footer contains a link to the creator's GitHub and Linkedin link. It is fixed to the bottom.
@@ -100,10 +102,12 @@ Colorful, plain and simple design. Show a map in the background to introduce the
 The colors used are mostly aligned with the background and typical colors used on a geographical map. Blue for water, beige for landscape and red, grey for cities and borders. The text color is dark grey and black to provide a user-friendly contrast.
 
 background and element colors
-<img src="images_README/Color_overview.png" alt="image shows colors which has been used">
+
+<img src="images_README/Color_overview.png" alt="image shows colors which has been used" width="250px">
 
 Font color
-<img src="images_README/Color_overview_font.png" alt="image shows font colors which has been used">
+
+<img src="images_README/Color_overview_font.png" alt="image shows font colors which has been used" width="250px">
 
 I used coolors.co to generate my colour palette.
 
@@ -137,17 +141,19 @@ Wireframes were developed for mobile, tablet, and desktop sizes by using Balsami
 
 ### Mobile Wireframes
 
-<img src="images_README/wireframe_desktop_quiz.PNG" alt="image shows wireframe of index.html">
+<img src="images_README/wireframe_phone_quiz.PNG" alt="image shows wireframe of index.html" width="200px">
+
 
 ### Tablet Wireframes
 
-<img src="images_README/wireframe_tablet_quiz.PNG" alt="image shows wireframe of index.html">
-<img src="images_README/wireframe_tablet_highscore.PNG" alt="image shows wireframe of highscore.html">
+<img src="images_README/wireframe_tablet_quiz.PNG" alt="image shows wireframe of index.html" width="400px">
+<img src="images_README/wireframe_tablet_highscore.PNG" alt="image shows wireframe of highscore.html" width="400px">
+
 
 ### Desktop Wireframes
 
-<img src="images_README/wireframe_phone_quiz.PNG" alt="image shows wireframe of index.html">
-<img src="images_README/wireframe_desktop_highscore.PNG" alt="image shows wireframe of highscore.html">
+<img src="images_README/wireframe_desktop_quiz.PNG" alt="image shows wireframe of index.html" width="500px">
+<img src="images_README/wireframe_desktop_highscore.PNG" alt="image shows wireframe of highscore.html" width="500px>
 
 
 
@@ -178,13 +184,13 @@ Validator testing has been done on:
 
 No errors were returned
 
-<img src="images_README/validator_html_index.PNG" alt="image shows preview of validator results">
+<img src="images_README/validator_html_index.PNG" alt="image shows preview of validator results" width="500px">
 
 <details>
     <summary>further results</summary>
 
-<img src="images_README/validator_html_highscore.PNG" alt="image shows preview of validator results">
-<img src="images_README/validator_html_end.PNG" alt="image shows preview of validator results">
+<img src="images_README/validator_html_highscore.PNG" alt="image shows preview of validator results" width="500px">
+<img src="images_README/validator_html_end.PNG" alt="image shows preview of validator results" width="500px">
 
 </details>
 
@@ -193,7 +199,7 @@ No errors were returned
 
 No errors were returned
 
-<img src="images_README/validator_css.PNG" alt="image shows preview of validator results">
+<img src="images_README/validator_css.PNG" alt="image shows preview of validator results" width="500px">
 
 
 #### [JS Validator] (https://jshint.com/)
@@ -202,20 +208,20 @@ No errors were returned
 
 /*jshint esversion: 6 */ was added  in the validator to let the validator recognize variables such as const and let
 
-<img src="images_README/validator_js_script.PNG" alt="image shows preview of validator results">
+<img src="images_README/validator_js_script.PNG" alt="image shows preview of validator results" width="500px">
 
 <details>
     <summary>further results</summary>
 
-<img src="images_README/validator_js_highscore.PNG" alt="image shows preview of validator results">
-<img src="images_README/validator_js_end.PNG" alt="image shows preview of validator results">
+<img src="images_README/validator_js_highscore.PNG" alt="image shows preview of validator results" width="500px">
+<img src="images_README/validator_js_end.PNG" alt="image shows preview of validator results" width="500px">
 
 </details>
 
 #### Accessability
 I confirm that the selected colors and fonts are easy to read and accessible by using Lighthouse in devtools (Chrome).
 
-<img src="images_README/Lighthouse_result.PNG" alt="image shows lighthouse result">
+<img src="images_README/Lighthouse_result.PNG" alt="image shows lighthouse result" width="650px">
 
 ### Unfixed Bugs
 (No unfixed bugs.)
@@ -329,7 +335,3 @@ move div position:relative - https://www.w3schools.com/cssref/css3_pr_transform.
 make div appear, disapear - https://www.w3schools.com/cssref/pr_class_visibility.php
 quiz idea - https://www.youtube.com/watch?v=u98ROZjBWy8
 Modal dialog box (better alternative to alert()) - https://www.youtube.com/watch?v=ywtkJkxJsdg
-
-
-
-- check documentation of Chris and old feedback from project 1
