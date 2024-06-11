@@ -2,6 +2,10 @@
 
 Welcome to my second project, the Europe quiz website is a landing page for people who like quizzes and are motivated to test or improve their knowledge about European countries and its capitals.
 
+By providing multiple choice questions and enabeling slight adjustments of the game settings the user is encouraged to play. A timer makes sure that the user is focused and at the same time it motivates for improvement since the speed of answering is represented in the final score. 
+
+Target groups of this game are students and every other people who like to extent their knowledge about Europe.
+
 <img src="images_README/AmIresponsive.PNG" alt="image shows responisveness by presenting preview on different devices">
 
 ## Features
@@ -93,15 +97,15 @@ Colorful, plain and simple design. Show a map in the background to introduce the
 
 
 ### Color Scheme
-The colors used are mostly aligned with the background and typical colors used on a map. Blue for water, beige for landscape and red, grey for cities and borders. The text color is dark grey and black to provide a user-friendly contrast.
+The colors used are mostly aligned with the background and typical colors used on a geographical map. Blue for water, beige for landscape and red, grey for cities and borders. The text color is dark grey and black to provide a user-friendly contrast.
 
-- backgrounds #ffffff, #fce89a
+background and element colors
+<img src="images_README/Color_overview.png" alt="image shows colors which has been used">
 
-- water blue: #79c9e7, #a6dbef, #58afd9
-- land green #a0cf50, beige #fad27f, brown #c0643d
-- accents #
-- logo, illustrations #
-- font color #252525, #000000 #918e8e
+Font color
+<img src="images_README/Color_overview_font.png" alt="image shows font colors which has been used">
+
+I used coolors.co to generate my colour palette.
 
 ### Typography
 
@@ -258,6 +262,25 @@ Here the live link:  https://fl0w97.github.io/ci-p2-europe-quiz/index.html
 - [Favicon.io](https://favicon.io/) used to create the favicon
 - [Google Fonts](https://fonts.google.com/) used to search a suitable font and using it
 - [Font Awesome](https://fontawesome.com/) used for logo designs (Linkedin, Youtube and GitHub)
+- [Color picker](https://coolors.co/image-picker)
+
+
+## Improvements and ideas for subsequent projects
+
+- extension of the database by adding countries beyond Europe or adding more details to the single capital-country match such as preseident, political system, show geographical location on a map
+
+- storage of scores and user names in a permanent database so that user who use different browsers can compare their scores. In that way the current limitation of the local storage is avoided.
+
+- Let the user choose between multiple choice question and a single input field for answering
+
+- the java script code can be improved and shortened by using more advanced functions and shortcuts
+
+- a music song can be added once there is a new highscore
+
+- offer different time slots to increase/ decrease the difficulty
+
+- a 404 error page can be included
+
 
 
 ## Credits
@@ -309,13 +332,4 @@ Modal dialog box (better alternative to alert()) - https://www.youtube.com/watch
 
 
 
-ToDo
-
-- check credits code incl. number in code css, js, check
-- correct background on deployed version, check
-- check images in readme.md, check
-- functional test once agian, check
-- check typos, describe bugs in more detail, check
-- add media links, check
-- add padding-top to h1, check
 - check documentation of Chris and old feedback from project 1
