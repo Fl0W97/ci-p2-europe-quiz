@@ -17,6 +17,7 @@ let numberCorrectAnswers;
 let highscore;
 
 // Timer
+// ***** shuffle array, credits code no. 5, readme.md *****
 let timeLeft;
 let elem = document.getElementById('Timer');
 let timerId = setInterval(countdown, 1000);
@@ -48,6 +49,7 @@ function startQuiz() {
     document.getElementById('quiz_settings').style.visibility = 'hidden';
 
     // Shuffle database
+    // ***** shuffle array, credits code no. 5, readme.md *****
     shuffle(CountriesCapitals);
 
     // Settings
@@ -58,6 +60,7 @@ function startQuiz() {
 }
 
 // Function to shuffle arrays, according to Fisher-Yates shuffle algorithm - check Readme.md code credentials no. 6
+// ***** shuffle array, credits code no. 5, readme.md *****
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         // Generate a random index between 0 and i (inclusive)
@@ -89,6 +92,7 @@ function displayNextQuestion() {
         document.getElementById("numberOfQuestion").innerHTML = index + " / " + totalNumberQuestions;
         displayQuestionAnswer();
         index++;
+        // ***** countdown, credits code no. 4, readme.md *****
         timeLeft = 20;
         countdown();
     } else {
@@ -162,6 +166,7 @@ function displayMultipleChoice() {
     let allAnswers = [correctAnswer, wrongAnswer1, wrongAnswer2];
 
     // Shuffle through list allAnswers so that the right answer is not always on the same index
+    // ***** shuffle array, credits code no. 5, readme.md *****
     shuffle(allAnswers);
 
     // Provide input for answers in HTML
@@ -209,5 +214,6 @@ function gameOver() {
     window.location.replace('end.html');
     });
     
+    // ***** useLocal storage credits code no. 3, readme.md *****
     localStorage.setItem("mostRecentScore", highscore);
 }

@@ -46,6 +46,7 @@ h1 {
     color: #252525;
     text-align: center;
     padding-bottom: 14px;
+    padding-top:10px;
 }
 
 h2 {
@@ -331,11 +332,6 @@ footer {
 
  /* Media query: tables and larger (768px and up) */
  @media screen and (min-width: 768px) {
-
-    h1 {
-        font-size: 105%;
-        padding-bottom: 5px;
-    }
 
     nav {
         font-size: 110%;
